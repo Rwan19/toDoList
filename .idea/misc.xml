@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/drawable/custom_button.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/drawable/ic_baseline_done_outline_24.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/drawable/ic_baseline_more_horiz_24.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/activity_fragment_to_do_lst.xml" value="0.1796875" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/activity_home_screen.xml" value="0.1796875" />
@@ -15,6 +17,9 @@
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/fragment_to_do_list_l.xml" value="0.17692307692307693" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/list_of_todo.xml" value="0.17692307692307693" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/menu/fragment_list_menu.xml" value="0.17692307692307693" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/menu/ic_baseline_navigate_next_24.xml" value="0.13703703703703704" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/menu/plus.xml" value="0.13703703703703704" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/menu/show_menu.xml" value="0.1796875" />
       </map>
     </option>
   </component>

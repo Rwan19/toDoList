@@ -2,6 +2,7 @@ package com.example.todolist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.todolist.craimFragment.ToDoList
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,13 +11,13 @@ class MainActivity : AppCompatActivity() {
 
         val currentFragment=// هل هيا موجودة او لا يبحث
             supportFragmentManager
-                .findFragmentById(R.id.fragment_container)
+                .findFragmentById(R.id.fragment_container1)
 
         if (currentFragment==null){
-            val fragment= homeScreen()
+            val fragment= ToDoList()
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_container,fragment)
+                .add(R.id.fragment_container1,fragment)
                 .commit()
 
         }

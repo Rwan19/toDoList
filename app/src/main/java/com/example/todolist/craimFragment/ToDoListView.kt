@@ -7,10 +7,11 @@ import com.example.todolist.datebase.ToDoListRebo
 class ToDoListView:ViewModel() {
     val toDoRepositry=ToDoListRebo.get()
     val liveDateToDo=toDoRepositry.getAllToDoList()
-    fun add(toDoListInfo: ToDoListInfo){
-        toDoRepositry.addToDoLit(toDoListInfo)
+
+
+
+    fun update(toDoListInfo: ToDoListInfo){
+        toDoRepositry.updateToDoList(toDoListInfo)
     }
-    fun del(toDoListInfo: ToDoListInfo){
-        toDoRepositry.delToDoList(toDoListInfo)
-    }
+
 }

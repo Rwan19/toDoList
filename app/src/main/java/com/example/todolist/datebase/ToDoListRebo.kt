@@ -24,7 +24,7 @@ class ToDoListRebo private constructor(context: Context) {
         return dao.getAllToDoList()
     }
 
-    fun getToDoList(id: UUID): LiveData<List<ToDoListInfo?>> {
+    fun getToDoList(id: UUID): LiveData<ToDoListInfo?> {
         return dao.getToDoList(id)
     }
 

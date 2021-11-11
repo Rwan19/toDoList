@@ -10,7 +10,7 @@ interface Dao {
     @Query( "SELECT * FROM ToDoListInfo")
     fun getAllToDoList():LiveData<List<ToDoListInfo>>
     @Query("SELECT* FROM ToDoListInfo WHERE id =(:id)")
-    fun getToDoList(id:UUID):LiveData<List<ToDoListInfo?>>
+    fun getToDoList(id:UUID):LiveData<ToDoListInfo?>
     @Update
     fun updateToDoList(toDoListInfo: ToDoListInfo)
     @Insert
