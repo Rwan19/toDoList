@@ -12,8 +12,8 @@ data class ToDoListInfo (
     var descriptionTask:String="",
     var date: Date = Date(),
     var dateEnd:Date=Date(),
-   // var isChick:Bu
-    var isSolved:Boolean=false
+    var isComplet:Boolean=false,
+    //var expand : Boolean = false
         )
 
 

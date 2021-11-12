@@ -12,10 +12,11 @@
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/activity_fragment_to_do_lst.xml" value="0.1796875" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/activity_home_screen.xml" value="0.1796875" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/fragment_add.xml" value="0.1" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/fragment_home_screen.xml" value="0.1796875" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/fragment_to_do_list.xml" value="0.22" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/fragment_to_do_list_l.xml" value="0.17692307692307693" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/list_of_todo.xml" value="0.17692307692307693" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/fragment_to_do_list.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/fragment_to_do_list_l.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/layout/list_of_todo.xml" value="0.25" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/menu/fragment_list_menu.xml" value="0.17692307692307693" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/menu/ic_baseline_navigate_next_24.xml" value="0.13703703703703704" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/toDoList/app/src/main/res/menu/plus.xml" value="0.13703703703703704" />
@@ -28,5 +29,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>

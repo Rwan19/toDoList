@@ -1,5 +1,4 @@
 package com.example.todolist.datebase
-
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.room.Room
@@ -19,6 +18,8 @@ class ToDoListRebo private constructor(context: Context) {
 
     private val dao = database.dao()
     private val executor = Executors.newSingleThreadExecutor()
+
+
 
     fun getAllToDoList(): LiveData<List<ToDoListInfo>> {
         return dao.getAllToDoList()

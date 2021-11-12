@@ -50,7 +50,7 @@ class ToDo : Fragment(),DatePickerFragment.DatePickerCallback {
         }
     }
 
-        override fun onCreateView(
+    override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -58,9 +58,7 @@ class ToDo : Fragment(),DatePickerFragment.DatePickerCallback {
         val view = inflater.inflate(R.layout.fragment_to_do_list, container, false)
         taskTitle = view.findViewById(R.id.title_task)
         taskDetails = view.findViewById(R.id.task_detailPT)
-        taskTime = view.findViewById(R.id.time_TV)
         dateBtn = view.findViewById(R.id.dateEnd_Btn)
-        isSolvedCh = view.findViewById(R.id.checkBox)
         saveBtn=view.findViewById(R.id.save_Btn)
             deletBtn=view.findViewById(R.id.delet_Btn)
             updateBtn=view.findViewById(R.id.update_Btn)
@@ -82,9 +80,7 @@ class ToDo : Fragment(),DatePickerFragment.DatePickerCallback {
             datePicker.arguments = args
             datePicker.setTargetFragment(this, 0)
             datePicker.show(this.parentFragmentManager, "date")
-
         }
-
 
         val textWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -92,21 +88,15 @@ class ToDo : Fragment(),DatePickerFragment.DatePickerCallback {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
                 toDoList.titleTask = s.toString()
-
-
             }
 
             override fun afterTextChanged(s: Editable?) {
-
             }
-
-
         }
+
         val descriptionWatcher=object:TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -114,14 +104,11 @@ class ToDo : Fragment(),DatePickerFragment.DatePickerCallback {
             }
 
             override fun afterTextChanged(s: Editable?) {
-
             }
         }
 
         taskTitle.addTextChangedListener(textWatcher)
         taskDetails.addTextChangedListener(descriptionWatcher)
-
-
 
         saveBtn.setOnClickListener {
             toDoListView.add(toDoList)
@@ -141,7 +128,6 @@ class ToDo : Fragment(),DatePickerFragment.DatePickerCallback {
                 it.supportFragmentManager
                     .beginTransaction()
                     .replace(R.id.fragment_container1, fragment)
-
                     .commit()
             }
         }
@@ -164,7 +150,7 @@ class ToDo : Fragment(),DatePickerFragment.DatePickerCallback {
         toDoList = it
         taskTitle.setText(it.titleTask)
         dateBtn.text = it.date.toString()
-        isSolvedCh.isChecked = it.isSolved ?: false
+
     }
         })
     }
