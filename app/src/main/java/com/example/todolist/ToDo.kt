@@ -25,7 +25,7 @@ const val dateFormat="dd/mm/yyyy"
 const val UPDATE_BUTTON="update enable"
 const val SAVE_BUTTON="save enable"
 
-class ToDo : Fragment(),DatePickerFragment.DatePickerCallback ,DialogFragment(){
+class ToDo : Fragment(),DatePickerFragment.DatePickerCallback{
 
     private lateinit var toDoList: ToDoListInfo
     private lateinit var taskTitle: EditText
