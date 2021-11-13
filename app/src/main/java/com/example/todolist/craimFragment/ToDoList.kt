@@ -86,15 +86,17 @@ class ToDoList : Fragment() {
 
     private inner class ToDoVH(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
         private lateinit var toDoListInfo: ToDoListInfo
-        private lateinit var isCompleet:CheckBox
+//        private lateinit var isCompleet:CheckBox
        // val taskAdapter=Adapter(this)
         val titleTextView: TextView = itemView.findViewById(R.id.titleToDo_item)
         val dateTextView: TextView = itemView.findViewById(R.id.dateToDo_item)
+        val isCompleet: TextView = view.findViewById(R.id.isCompleet)
+
 
         init {
             itemView.setOnClickListener(this)
-            isCompleet.setOnCheckedChangeListener { _, isChecked ->
-                toDoListInfo.isComplet = isChecked}
+
+
         }
 
 
@@ -107,6 +109,7 @@ class ToDoList : Fragment() {
             val dateFormat= SimpleDateFormat("dd/mm/yyyy")
             if(currentDate.after(toDoListInfo2.date)){
                 dateTextView.visibility=View.VISIBLE
+
             }
 
 
@@ -121,7 +124,7 @@ class ToDoList : Fragment() {
                     }
 
                     override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                      //  val task = taskAdapter.
+                    //   val task = taskAdapter.
                     }
 
 
@@ -157,7 +160,6 @@ class ToDoList : Fragment() {
         override fun onBindViewHolder(holder: ToDoVH, position: Int) {
             val toDo=toDoA[position]
             holder.bind(toDo)
-
         }
 
         override fun getItemCount(): Int =toDoA.size

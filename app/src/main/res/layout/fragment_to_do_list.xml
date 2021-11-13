@@ -10,17 +10,21 @@
 
     <Button
         android:id="@+id/update_Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="464dp"
-        android:layout_marginEnd="148dp"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="314dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="46dp"
+        android:background="@drawable/button"
         android:clickable="true"
-        android:src="@drawable/ic_baseline_delete_24"
-        android:text="Update"
+        android:drawableBottom="@drawable/ic_baseline_edit_24"
+        android:src="@drawable/ic_baseline_edit_24"
         android:textColor="#FFFFFF"
-        app:backgroundTint="#CB997E"
+        app:backgroundTint="#E6CCB2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_Btn" />
 
     <EditText
         android:id="@+id/title_task"
@@ -52,41 +56,54 @@
 
     <Button
         android:id="@+id/dateEnd_Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="160dp"
+        android:layout_width="136dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="136dp"
         android:backgroundTint="#CB997E"
         android:clickable="true"
+        android:src="@drawable/ic_baseline_calendar_today_24"
         android:text="Date"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="322dp" />
+        app:layout_constraintTop_toBottomOf="@+id/task_detailPT" />
 
     <Button
         android:id="@+id/delet_Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="536dp"
-        android:layout_marginEnd="108dp"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="314dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="46dp"
+        android:background="@drawable/daletebutton"
         android:clickable="true"
+        android:drawableBottom="@drawable/ic_baseline_delete_24"
+
         android:src="@drawable/ic_baseline_delete_24"
-        android:text="Delete"
         android:textColor="#FFFFFF"
-        app:backgroundTint="#CB997E"
+        app:backgroundTint="#EDE0D4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_Btn" />
 
     <Button
         android:id="@+id/save_Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="536dp"
-        android:backgroundTint="#CB997E"
-        android:text="Save"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="53dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="314dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="46dp"
+        android:background="@drawable/savebutton"
+        android:backgroundTint="#DDB892"
+        android:drawableBottom="@drawable/ic_baseline_save_alt_24"
+        android:src="@drawable/ic_baseline_save_alt_24"
         android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

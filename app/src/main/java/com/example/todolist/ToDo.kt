@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
+import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.todolist.craimFragment.TODO_ID
 import com.example.todolist.craimFragment.ToDoList
@@ -24,12 +25,11 @@ const val dateFormat="dd/mm/yyyy"
 const val UPDATE_BUTTON="update enable"
 const val SAVE_BUTTON="save enable"
 
-class ToDo : Fragment(),DatePickerFragment.DatePickerCallback {
+class ToDo : Fragment(),DatePickerFragment.DatePickerCallback ,DialogFragment(){
 
     private lateinit var toDoList: ToDoListInfo
     private lateinit var taskTitle: EditText
     private lateinit var taskDetails: EditText
-    private lateinit var taskTime: TextView
     private lateinit var dateBtn: Button
     private lateinit var isSolvedCh: CheckBox
     private lateinit var saveBtn:Button
@@ -62,6 +62,7 @@ class ToDo : Fragment(),DatePickerFragment.DatePickerCallback {
         saveBtn=view.findViewById(R.id.save_Btn)
             deletBtn=view.findViewById(R.id.delet_Btn)
             updateBtn=view.findViewById(R.id.update_Btn)
+
 
         dateBtn.apply {
              text = toDoList.date.toString()
