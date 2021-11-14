@@ -1,7 +1,9 @@
 package com.example.todolist.craimFragment
 
 import android.annotation.SuppressLint
+import android.icu.text.MessageFormat.format
 import android.os.Bundle
+import android.text.format.DateFormat.format
 import android.util.Log
 import android.view.*
 import android.widget.CheckBox
@@ -16,20 +18,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todolist.*
 import com.example.todolist.datebase.ToDoListInfo
+import java.lang.String.format
+import java.text.DateFormat
+import java.text.MessageFormat.format
 import java.text.SimpleDateFormat
 import java.util.*
 
-
 const val TODO_ID = "UPDATE"
-
 class ToDoList : Fragment() {
     private lateinit var toDoRV: RecyclerView
-
-
     private val toDoListView by lazy { ViewModelProvider(this).get(ToDoListView::class.java) }
-
-
-
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
@@ -86,52 +84,38 @@ class ToDoList : Fragment() {
 
     private inner class ToDoVH(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
         private lateinit var toDoListInfo: ToDoListInfo
-//        private lateinit var isCompleet:CheckBox
-       // val taskAdapter=Adapter(this)
         val titleTextView: TextView = itemView.findViewById(R.id.titleToDo_item)
         val dateTextView: TextView = itemView.findViewById(R.id.dateToDo_item)
         val isCompleet: TextView = view.findViewById(R.id.isCompleet)
-
+        val taskOver:TextView=view.findViewById(R.id.task_time)
 
         init {
             itemView.setOnClickListener(this)
-
-
+            dateTextView.setOnClickListener(this)
         }
-
 
         @SuppressLint("SimpleDateFormat")
         fun bind(toDoListInfo2: ToDoListInfo) {
             this.toDoListInfo = toDoListInfo2
             titleTextView.text = toDoListInfo2.titleTask
-            dateTextView.text = toDoListInfo2.date.toString()
-            val currentDate=Date()
-            val dateFormat= SimpleDateFormat("dd/mm/yyyy")
-            if(currentDate.after(toDoListInfo2.date)){
-                dateTextView.visibility=View.VISIBLE
+            var currentDate=Date()
 
+
+            if (toDoListInfo2.date!=null) {
+                if (currentDate.after(toDoListInfo2.date)) {
+                    taskOver.visibility = View.VISIBLE
+                } else {
+                    taskOver.text = ""
+                }
             }
 
+            if (toDoListInfo2.date!=null) {
+                dateTextView.text= DateFormat.getDateInstance().format(toDoListInfo2.date)
+            }else{
+                dateTextView.text=""
+            }
 
-            ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
-                    override fun onMove(
-                        recyclerView: RecyclerView,
-                        viewHolder: RecyclerView.ViewHolder,
-                        target: RecyclerView.ViewHolder
-                    ): Boolean {
-
-                        return false
-                    }
-
-                    override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                    //   val task = taskAdapter.
-                    }
-
-
-                })
         }
-
-
         override fun onClick(v: View?) {
             if (v == itemView) {
                 val args = Bundle()

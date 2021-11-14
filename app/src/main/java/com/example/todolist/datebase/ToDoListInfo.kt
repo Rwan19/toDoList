@@ -10,10 +10,9 @@ data class ToDoListInfo (
     @PrimaryKey val id: UUID = UUID.randomUUID(),
     var titleTask:String="",
     var descriptionTask:String="",
-    var date: Date = Date(),
+    var date: Date? = Date(),
     var dateEnd:Date=Date(),
     var isComplet:Boolean=false,
-    //var expand : Boolean = false
         )
 
 

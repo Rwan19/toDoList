@@ -1,5 +1,6 @@
 package com.example.todolist
 
+import android.icu.text.DateFormat.getDateInstance
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -18,12 +19,12 @@ import com.example.todolist.craimFragment.TODO_ID
 import com.example.todolist.craimFragment.ToDoList
 import com.example.todolist.datebase.ToDoListInfo
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.text.DateFormat.getDateInstance
 import java.util.*
 
 const val ToDo_DATE_KEY="toDoDate"
-const val dateFormat="dd/mm/yyyy"
-const val UPDATE_BUTTON="update enable"
-const val SAVE_BUTTON="save enable"
+const val dateFormat="EE,YYYY MMM dd"
+
 
 class ToDo : Fragment(),DatePickerFragment.DatePickerCallback{
 
@@ -62,6 +63,7 @@ class ToDo : Fragment(),DatePickerFragment.DatePickerCallback{
         saveBtn=view.findViewById(R.id.save_Btn)
             deletBtn=view.findViewById(R.id.delet_Btn)
             updateBtn=view.findViewById(R.id.update_Btn)
+
 
 
         dateBtn.apply {
@@ -146,11 +148,26 @@ class ToDo : Fragment(),DatePickerFragment.DatePickerCallback{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        toDoListView.toDoliveData.observe(viewLifecycleOwner,androidx.lifecycle.Observer {
+
+        if (toDoList.date!=null) {
+            deletBtn.text = toDoList.date.toString()
+            if (toDoList.date!=null) {
+                deletBtn.text = toDoList.date.toString()
+            }
+        }else{
+            dateBtn.text="Date"
+        }
+
+        toDoListView.toDoliveData.observe(
+            viewLifecycleOwner,androidx.lifecycle.Observer {
     it?.let {
         toDoList = it
         taskTitle.setText(it.titleTask)
+        taskDetails.setText(it.descriptionTask)
         dateBtn.text = it.date.toString()
+        if (toDoList.date==null){
+            dateBtn.text=""
+        }
 
     }
         })
